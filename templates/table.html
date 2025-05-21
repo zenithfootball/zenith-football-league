@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head><title>League Table</title></head>
+<body>
+    <h1>League Table</h1>
+    <table border="1">
+        <tr><th>Team</th><th>Played</th><th>Points</th></tr>
+        {% for code, data in standings.items() %}
+        <tr>
+            <td style="color: {{ teams[code].color }}">{{ teams[code].name }}</td>
+            <td>{{ data.played }}</td>
+            <td>{{ data.points }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="/">Home</a>
+</body>
+</html>

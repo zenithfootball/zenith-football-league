@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head><title>{{ team.name }}</title></head>
+<body style="background-color: {{ team.color }}; color: white;">
+    <h1>{{ team.name }}</h1>
+    <img src="/static/img/{{ team.logo }}" width="100">
+    <h2>Players</h2>
+    <ul>
+        {% for player in team.players %}
+        <li>{{ player }}</li>
+        {% endfor %}
+    </ul>
+    <a href="/">Home</a>
+</body>
+</html>

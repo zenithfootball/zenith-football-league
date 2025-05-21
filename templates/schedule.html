@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head><title>Schedule</title></head>
+<body>
+    <h1>Match Schedule</h1>
+    <ul>
+        {% for match in matches %}
+        <li>{{ match.home }} vs {{ match.away }} - {{ match.home_score or "-" }} : {{ match.away_score or "-" }}</li>
+        {% endfor %}
+    </ul>
+    <a href="/">Home</a>
+</body>
+</html>

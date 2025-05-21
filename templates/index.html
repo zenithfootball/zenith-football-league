@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head><title>Zenith Football League</title><link rel="stylesheet" href="/static/css/style.css"></head>
+<body>
+    <h1>Welcome to Zenith Football League</h1>
+    <nav>
+        <a href="/schedule">Match Schedule</a> |
+        <a href="/table">League Table</a> |
+        <a href="/admin">Admin Login</a>
+    </nav>
+    <h2>Teams</h2>
+    <ul>
+        {% for code, team in teams.items() %}
+        <li><a href="/team/{{ code }}">{{ team.name }}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

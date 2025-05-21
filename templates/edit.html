@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head><title>Edit Scores</title></head>
+<body>
+    <h1>Edit Match Scores</h1>
+    <form method="POST">
+        {% for match in matches %}
+        <div>
+            {{ match.home }} vs {{ match.away }}
+            <input name="home_score" placeholder="Home Score" required>
+            <input name="away_score" placeholder="Away Score" required>
+            <input type="hidden" name="match_index" value="{{ loop.index0 }}">
+            <button type="submit">Update</button>
+        </div>
+        {% endfor %}
+    </form>
+    <a href="/logout">Logout</a>
+</body>
+</html>
